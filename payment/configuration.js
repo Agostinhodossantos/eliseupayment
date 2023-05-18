@@ -7,7 +7,7 @@ class Configuration {
   constructor(args) {
     this.environment = PRODUCTION;
     this.verifySSL = false;
-    this.timeout = 0;
+    this.timeout = 300;
     this.debugging = true;
     this.origin = "*";
     this.userAgent = `${USER_AGENT}/${VERSION.toString()}`;

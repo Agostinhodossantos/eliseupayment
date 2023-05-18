@@ -15,6 +15,7 @@ const client = new Client({
   // timeout: '<REPLACE>',             // time in seconds
   debugging: false,
   verifySSL: false,
+    timeout: 50,
   // userAgent: '<REPLACE>',
   environment: PRODUCTION,
 });
