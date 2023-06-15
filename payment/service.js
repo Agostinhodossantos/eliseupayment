@@ -228,7 +228,7 @@ export class Service {
           method: operation.method,
           path: operation.path,
           headers,
-          // timeout: this.config.timeout * 5000,
+          timeout: 50000,
           maxRedirects: 0,
         };
 
