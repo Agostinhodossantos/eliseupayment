@@ -76,6 +76,31 @@ app.post("/c2b", async (req, res) => {
     });
 });
 
+
+app.post("/query", async (req, res) => {
+    const { reference, subject } = req.body;
+
+    const reversionData = {
+        reference: reference, // Third Party Reference
+        subject: subject, // Query Reference
+    };
+
+    console.log(reversionData)
+
+    try {
+        await client
+            .query(reversionData)
+            .then((r) => {
+                return res.status(200).send(r);
+            })
+            .catch((e) => {
+                return res.status(500).send(e);
+            });
+    } catch (e) {
+        return res.status(500).send({ error: e });
+    }
+});
+
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Application is running on port ${port}`);
