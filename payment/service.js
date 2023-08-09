@@ -228,7 +228,6 @@ export class Service {
           method: operation.method,
           path: operation.path,
           headers,
-          timeout: 50000,
           maxRedirects: 0,
         };
 

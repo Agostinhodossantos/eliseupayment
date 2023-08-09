@@ -69,9 +69,13 @@ app.post("/c2b", async (req, res) => {
    await client
       .receive(paymentData)
       .then((r) => {
+          console.log(r)
         return res.status(200).send(r)
       })
     .catch((e) => {
+
+        console.log("Error")
+        console.log(e)
         return res.status(500).send(e)
     });
 });
