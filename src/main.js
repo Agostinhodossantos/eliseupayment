@@ -89,6 +89,7 @@ app.post("/query", async (req, res) => {
         subject: subject, // Query Reference
     };
 
+
     console.log(reversionData)
 
     try {
